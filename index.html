@@ -267,11 +267,26 @@
         </ul>
       </div>
 
-      <div class=" md:hidden lg:hidden">
+      <div id="menu-button" class=" md:hidden lg:hidden">
         <i class="fa-solid fa-bars"></i>
       </div>
     </nav>
   </header>
+
+  <!-- Dropdown menu -->
+   <div id="menu-backdrop" class="fixed h-full w-full top-[-100%] left-0 bg-[rgba(0,0,0,0.4)] flex justify-center z-30">
+    <div id="menu-box" class="w-[80%] h-[500px] bg-[#ffffff4c] flex items-center justify-center backdrop-blur-[4px] rounded-[20px]">
+      <ul class="text-[white] text-[22px] flex flex-col gap-[20px]">
+          <!-- Options goes here -->
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+        <div id="menu-cross" class="absolute top-[20px] right-[20px] text-[white] text-[32px]">
+          <i class="fa-solid fa-circle-xmark"></i>
+        </div>
+    </div>
+   </div>
 
 
   <!-- GSAP plugin CDN -->

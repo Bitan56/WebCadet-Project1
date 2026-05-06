@@ -3,6 +3,13 @@ banner = document.querySelector("#banner");
 mainBody = document.querySelector("#main-body");
 aboutImg = document.querySelector("#about-img");
 aboutText = document.querySelector("#about-text");
+menuBackdrop = document.querySelector("#menu-backdrop");
+menuBox = document.querySelector("#menu-box");
+menuCross = document.querySelector("#menu-cross");
+menuText = document.querySelector("#menu-box ul");
+menuButton = document.querySelector("#menu-button");
+
+tl = gsap.timeline()
 
 gsap.from(navBar, {
     scale: 0,
@@ -40,3 +47,38 @@ gsap.from("#about #about-img img",{
         scrub:4
     }
 })
+
+tl.to(menuBackdrop,{
+    top:0,
+    delay:0,
+    duration:1
+})
+
+tl.from(menuBox,{
+    opacity:0,
+    height:0,
+    delay:0,
+    duration:0.5
+})
+
+tl.from(menuText,{
+    opacity:0,
+    scale:0,
+    delay:0,
+    duration:0.5,
+})
+
+tl.pause()
+
+menuButton.addEventListener("click",()=>{
+    tl.play()
+})
+
+menuCross.addEventListener("click",()=>{
+    tl.reverse()
+})
+
+menuText.addEventListener("click",()=>{
+    tl.reverse()
+})
+
