@@ -30,8 +30,8 @@ gsap.from(mainBody, {
     scrollTrigger:{
         trigger:mainBody,
         scroller:"body",
-        start:"top 95%%",
-        end:"top 70%",
+        start:"top 230%",
+        end:"top 10%",
         scrub:4
     }
 })
@@ -52,21 +52,21 @@ tl.to(menuBackdrop,{
     top:0,
     display:"block",
     delay:0,
-    duration:1
+    duration:0.3
 })
 
 tl.from(menuBox,{
     opacity:0,
     height:0,
     delay:0,
-    duration:0.5
+    duration:0.2
 })
 
 tl.from(menuText,{
     opacity:0,
     scale:0,
     delay:0,
-    duration:0.5,
+    duration:0.2,
 })
 
 tl.pause()
