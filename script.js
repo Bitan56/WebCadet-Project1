@@ -50,6 +50,7 @@ gsap.from("#about #about-img img",{
 
 tl.to(menuBackdrop,{
     top:0,
+    display:"block",
     delay:0,
     duration:1
 })
