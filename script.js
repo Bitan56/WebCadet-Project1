@@ -32,7 +32,7 @@ gsap.from(mainBody, {
         scroller:"body",
         start:"top 230%",
         end:"top 10%",
-        scrub:4
+        scrub:2
     }
 })
 
